@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:imposter/screens/game.dart';
+import 'package:imposter/screens/custom_words.dart';
 import 'package:imposter/screens/setup.dart';
 
 class MainMenueScreen extends StatelessWidget {
@@ -15,13 +15,13 @@ class MainMenueScreen extends StatelessWidget {
             //Image(image: AssetImage(''),),
             FloatingActionButton(
               onPressed: () => Navigator.of(context).push(
-                MaterialPageRoute(builder: (context) => const GameScreen()),
+                MaterialPageRoute(builder: (context) => const SetupScreen()),
               ),
               child: const Text('Start Game'),
             ),
             FloatingActionButton(
               onPressed: () => Navigator.of(context).push(
-                MaterialPageRoute(builder: (context) => const SetupScreen()),
+                MaterialPageRoute(builder: (context) => const CustomWordsScreen()),
               ),
               child: const Text('Customize Own Words'),
             ),
