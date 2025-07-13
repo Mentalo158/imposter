@@ -7,25 +7,27 @@ class MainMenueScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            //Image(image: AssetImage(''),),
-            FloatingActionButton(
-              onPressed: () => Navigator.of(context).push(
-                MaterialPageRoute(builder: (context) => const SetupScreen()),
+    return SafeArea(
+      child: Scaffold(
+        body: Center(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              //Image(image: AssetImage(''),),
+              FloatingActionButton(
+                onPressed: () => Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => const SetupScreen()),
+                ),
+                child: const Text('Start Game'),
               ),
-              child: const Text('Start Game'),
-            ),
-            FloatingActionButton(
-              onPressed: () => Navigator.of(context).push(
-                MaterialPageRoute(builder: (context) => const CustomWordsScreen()),
+              FloatingActionButton(
+                onPressed: () => Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => const CustomWordsScreen()),
+                ),
+                child: const Text('Customize Own Words'),
               ),
-              child: const Text('Customize Own Words'),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
