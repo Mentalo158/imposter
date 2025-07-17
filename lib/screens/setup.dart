@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:imposter/screens/game.dart';
 
 class SetupScreen extends StatefulWidget {
   const SetupScreen({super.key});
@@ -89,6 +90,13 @@ class _SetupScreenState extends State<SetupScreen> {
                     );
                   },
                 ).toList(),
+              ),
+            ),
+            FloatingActionButton(
+              onPressed: () => Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) => GameScreen(playerList: playerList),
+                ),
               ),
             ),
             Padding(
